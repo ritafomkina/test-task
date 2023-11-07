@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/Lato/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/Lato/Lato-Bold.ttf") format("truetype");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  font-family: "Lato";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #474342;
+}
+
+.wrapper {
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  margin: 0 auto;
+  padding: 0px 30px 0px 30px;
+}
+.product-card {
+  max-width: 1440px;
+  min-width: 720px;
+  display: flex;
+}
+.product-img {
+  width: 40%;
+  aspect-ratio: 4/3;
+}
+
+.product-description {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.product-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.product-data {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.product-moreinfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.product-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 15px;
+}
+
+.product-price {
+  color: #c1122a;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.product-price::before {
+  content: "$";
+  margin-right: 7px;
+}
+
+.product-tag:not(:last-child):after {
+    content: "•";
+    width: 30px;
+    height: 10px;
+    color: #bfc5ce;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.product-location {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-location::before {
+  content: "";
+  background-image: url("assets/icons/location-sign-svgrepo-com.svg");
+  height: 25px;
+  width: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  background-size: 25px;
+  margin-right: 10px;
+}
